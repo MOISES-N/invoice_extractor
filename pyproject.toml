@@ -1,0 +1,28 @@
+[project]
+name = "invoice-extractor"
+version = "0.1.0"
+description = "Invoice extractor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "loguru>=0.7.3",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "pydantic>=2.12.5",
+    "pypdf>=6.5.0",
+    "pyyaml>=6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=7.1.0",
+    "pyzmq>=27.1.0",
+]
+
+[build-system]
+requires = ["setuptools>=72.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where =["src"]
+include = ["invoice_extractor*"]
